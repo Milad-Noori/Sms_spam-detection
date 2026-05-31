@@ -28,6 +28,12 @@ This project combines Natural Language Processing (NLP), Machine Learning, and a
 
 ---
 
+## 📸 Application Screenshot
+
+![Spam Detector App](images/app_screenshot.png)
+
+
+
 ## Demo
 
 The application allows users to:
