@@ -39,9 +39,9 @@ from sklearn.metrics import classification_report
 
 from sklearn.model_selection import train_test_split
 
-# x_train, x_test, y_train, y_test = train_test_split(message['message'],
-#                                                     message['label'],
-#                                                     test_size=0.2, random_state=42)
+x_train, x_test, y_train, y_test = train_test_split(message['message'],
+                                                    message['label'],
+                                                    test_size=0.2, random_state=42)
 
 from sklearn.pipeline import Pipeline
 
@@ -54,9 +54,9 @@ pipeline = Pipeline([
 pipeline.fit(message['message'], message['label'])
 
 
-# pipline.fit(x_train, y_train)
-# prediction = pipline.predict(x_test)
-# print(classification_report(y_test, prediction))
+pipline.fit(x_train, y_train)
+prediction = pipline.predict(x_test)
+print(classification_report(y_test, prediction))
 # Singleton Prediction
 
 def singleton_prediction(text_message: str):
