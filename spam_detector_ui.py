@@ -38,7 +38,7 @@ from nltk.corpus import stopwords
 model_form = Tk()
 model_form.title("Spam Detector")
 model_form.resizable(0, 0)
-model_form.geometry("500x500")
+model_form.geometry("600x600")
 model_form.configure(bg="white")
 model_form.iconbitmap("icon/spam_detector_icon.ico")
 
@@ -62,7 +62,7 @@ def predict():
     spam_percent.configure(text=f"{int(spam_prob * 100)}%")
 
 lbl_message_text = Label(model_form, text="Enter your message: ", bg="white", font=("Arial", 12))
-lbl_message_text.grid(column=0, row=0, padx=20, pady=(20, 5), sticky='w')
+lbl_message_text.grid(column=0, row=1, padx=25, pady=(20, 5), sticky='w')
 
 message_input = Text(model_form, height=5,  width=50, bg="white", font=("Arial", 11))
 message_input.grid(column=0, row=1, sticky='w', padx=20, pady=20)
@@ -87,5 +87,7 @@ spam_bar.grid(column=0, row=6, pady=15, padx=20, sticky='w')
 
 spam_percent = Label(model_form, text='0%', bg="white", font=("Arial", 12))
 spam_percent.grid(column=0, row=6, pady=15, padx=20, sticky='e')
+
+
 
 model_form.mainloop()
