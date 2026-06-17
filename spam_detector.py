@@ -1,5 +1,5 @@
 import pandas as pd
-import pipline
+from sklearn.pipeline import Pipeline
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import CountVectorizer
 import nltk
@@ -94,6 +94,28 @@ def dataset_statistics():
     print(f"Average Length: {message['length'].mean():.2f}")
 
 dataset_statistics()
+
+def batch_prediction(messages):
+    print("\nBatch Prediction Results")
+    print("-" * 50)
+
+    predictions = pipeline.predict(messages)
+
+    for text, pred in zip(messages, predictions):
+        print(f"Message: {text[:60]}")
+        print(f"Prediction: {pred}")
+        print("-" * 50)
+
+
+test_messages = [
+    "You have won a free vacation. Call now!",
+    "Don't forget our meeting tomorrow morning.",
+    "URGENT! Claim your reward today."
+]
+
+batch_prediction(test_messages)
+
+
 
 # Deploy Model
 # joblib
