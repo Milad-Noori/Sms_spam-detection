@@ -85,6 +85,16 @@ singleton_prediction(sample3_text)
 print('-' * 100)
 singleton_prediction(sample4_text)
 # -------------------------------------------------------------
+def dataset_statistics():
+    print("\nDataset Statistics")
+    print("-" * 30)
+    print(f"Total Messages: {len(message)}")
+    print(f"Spam Messages : {(message['label'] == 'spam').sum()}")
+    print(f"Ham Messages  : {(message['label'] == 'ham').sum()}")
+    print(f"Average Length: {message['length'].mean():.2f}")
+
+dataset_statistics()
+
 # Deploy Model
 # joblib
 
