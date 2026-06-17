@@ -72,10 +72,25 @@ def singleton_prediction(text_message: str):
         f"Text: {text_message} \n\t Prediction: {result}\n\t Probability: Ham: {probability[0][0]:.2f}, Spam: {probability[0][1]:.2f}")
 
 
-sample1_text = "CONGRATULATIONS! You won a free iPhone. Click here to claim your prize now!"
-sample2_text = "Hey, are we still meeting for dinner at 8pm?"
-sample3_text = "URGENT: Your bank account has been suspended. Verify your details immediately at http://fakebank.com"
-sample4_text = "WINNER!! Free prize money URGENT claim now"
+
+sample1_text = (
+    "CONGRATULATIONS! You won a free iPhone. "
+    "Click here to claim your prize now!"
+)
+
+sample2_text = (
+    "Hey, are we still meeting for dinner at 8pm?"
+)
+
+sample3_text = (
+    "URGENT: Your bank account has been suspended. "
+    "Verify your details immediately at "
+    "http://fakebank.com"
+)
+
+sample4_text = (
+    "WINNER!! Free prize money URGENT claim now"
+)
 
 singleton_prediction(sample1_text)
 print('-' * 100)
