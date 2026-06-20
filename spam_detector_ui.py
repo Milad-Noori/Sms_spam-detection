@@ -36,11 +36,15 @@ from tkinter import ttk
 from nltk.corpus import stopwords
 
 model_form = Tk()
+model_form.configure(bg="#f4f6f7")
 model_form.title("Spam Detector")
 model_form.resizable(0, 0)
-model_form.geometry("600x600")
-model_form.configure(bg="white")
+model_form.geometry("450x450")
 model_form.iconbitmap("icon/spam_detector_icon.ico")
+style = ttk.Style()
+style.theme_use("default")
+style.configure("Green.Horizontal.TProgressbar", background="#2ecc71")
+style.configure("Red.Horizontal.TProgressbar", background="#e74c3c")
 
 def predict():
     message = message_input.get(1.0, tk.END).strip()
@@ -85,8 +89,8 @@ spam_label.grid(column=0, row=5, sticky='w', padx=20, pady=(10, 0))
 spam_bar = ttk.Progressbar(model_form, length=360, mode="determinate")
 spam_bar.grid(column=0, row=6, pady=15, padx=20, sticky='w')
 
-spam_percent = Label(model_form, text='0%', bg="white", font=("Arial", 12))
-spam_percent.grid(column=0, row=6, pady=15, padx=20, sticky='e')
+result_label = Label(model_form, text="", bg="white", font=("Arial",14,"bold"))
+result_label.grid(column=0,row=7,pady=10)
 
 
 
