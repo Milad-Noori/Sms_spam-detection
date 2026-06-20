@@ -63,7 +63,7 @@ def predict():
     spam_bar["value"] = spam_prob * 100
 
     ham_percent.configure(text=f"{int(ham_prob * 100)}%")
-    spam_percent.configure(text=f"{int(spam_prob * 100)}%")
+    result_label.configure(text=f"{int(spam_prob * 100)}%")
 
 lbl_message_text = Label(model_form, text="Enter your message: ", bg="white", font=("Arial", 12))
 lbl_message_text.grid(column=0, row=1, padx=25, pady=(20, 5), sticky='w')
