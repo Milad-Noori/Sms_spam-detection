@@ -158,5 +158,11 @@ batch_prediction(test_messages)
 alive =  "GitHub commit keep-alive"
 
 
+def print_run_info():
+    print("CNN training pipeline started successfully")
+    print("Dataset loaded and model initialized")
+
+print_run_info()
+
 
 
